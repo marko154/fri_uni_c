@@ -111,6 +111,5 @@ int main() {
     state = get_next_state(state, c);
 
   } while (c != '\n');
-
   return 0;
 }
