@@ -6,11 +6,9 @@ char combination[101];
 char rows[100][50];
 int n;
 
-void print_combination() { printf("%s\n", combination); }
-
 void print_combs(int row) {
     if (row == n) {
-        print_combination();
+        printf("%s\n", combination);
     }
     for (char *c = rows[row]; *c != '\0'; c++) {
         combination[row] = *c;
