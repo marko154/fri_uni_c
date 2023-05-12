@@ -1,11 +1,12 @@
 #include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
+#define MAX_SIZE 20
 
-int numbers[20];
-int (*stacks)[20];
-int *capacities;
-bool *taken;
+int numbers[MAX_SIZE];
+int stacks[MAX_SIZE][MAX_SIZE];
+int stackSizes[MAX_SIZE];
+bool taken[MAX_SIZE];
 int target;
 int n, k;
 
@@ -13,13 +14,12 @@ void print_stacks() {
     printf("{");
     for (int i = 0; i < k; i++) {
         printf("{%d", stacks[i][0]);
-        for (int j = 1; j < capacities[i]; j++) {
+        for (int j = 1; j < stackSizes[i]; j++) {
             printf(", %d", stacks[i][j]);
         }
         printf("}");
         if (i < k - 1) printf(", ");
     }
-
     printf("}\n");
 }
 
@@ -40,8 +40,8 @@ void rec(int stackIdx, int stackSum, int startIdx) {
     for (int i = startIdx; i < n; i++) {
         if (taken[i]) continue;
         taken[i] = true;
-        stacks[stackIdx][capacities[stackIdx]] = numbers[i];
-        capacities[stackIdx]++;
+        stacks[stackIdx][stackSizes[stackIdx]] = numbers[i];
+        stackSizes[stackIdx]++;
         int sumWith = stackSum + numbers[i];
         if (sumWith == target) {
             rec(stackIdx + 1, 0, index_of(stacks[stackIdx][0]));
@@ -49,16 +49,12 @@ void rec(int stackIdx, int stackSum, int startIdx) {
             rec(stackIdx, sumWith, i + 1);
         }
         taken[i] = false;
-        capacities[stackIdx]--;
+        stackSizes[stackIdx]--;
     }
 }
 
 int main() {
     scanf("%d %d", &n, &k);
-
-    stacks = calloc(k, sizeof(int[20]));
-    capacities = calloc(k, sizeof(int));
-    taken = calloc(n, sizeof(bool));
     int total = 0;
 
     for (int i = 0; i < n; i++) {
