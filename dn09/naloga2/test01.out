@@ -1,14 +1,3 @@
-Slon, ki gleda leva, lovi psa.
-Slon, ki gleda leva, lovi psa, ki hrani muco.
-Slon, ki gleda leva, lovi muco.
-Slon, ki gleda leva, hrani psa.
-Slon, ki gleda leva, hrani muco.
-Slon, ki gleda leva, ki lovi psa, hrani muco.
-Slon, ki gleda psa, lovi muco.
-Slon, ki gleda psa, hrani muco.
-Slon, ki lovi leva, hrani psa.
-Slon, ki lovi leva, hrani muco.
-Slon, ki lovi psa, hrani muco.
 Slon gleda leva.
 Slon gleda leva, ki lovi psa.
 Slon gleda leva, ki lovi psa, ki hrani muco.
@@ -28,9 +17,17 @@ Slon lovi muco.
 Slon hrani leva.
 Slon hrani psa.
 Slon hrani muco.
-Lev, ki gleda psa, lovi muco.
-Lev, ki gleda psa, hrani muco.
-Lev, ki lovi psa, hrani muco.
+Slon, ki gleda leva, lovi psa.
+Slon, ki gleda leva, lovi psa, ki hrani muco.
+Slon, ki gleda leva, lovi muco.
+Slon, ki gleda leva, hrani psa.
+Slon, ki gleda leva, hrani muco.
+Slon, ki gleda leva, ki lovi psa, hrani muco.
+Slon, ki gleda psa, lovi muco.
+Slon, ki gleda psa, hrani muco.
+Slon, ki lovi leva, hrani psa.
+Slon, ki lovi leva, hrani muco.
+Slon, ki lovi psa, hrani muco.
 Lev gleda psa.
 Lev gleda psa, ki lovi muco.
 Lev gleda psa, ki hrani muco.
@@ -40,6 +37,9 @@ Lev lovi psa, ki hrani muco.
 Lev lovi muco.
 Lev hrani psa.
 Lev hrani muco.
+Lev, ki gleda psa, lovi muco.
+Lev, ki gleda psa, hrani muco.
+Lev, ki lovi psa, hrani muco.
 Pes gleda muco.
 Pes lovi muco.
 Pes hrani muco.
